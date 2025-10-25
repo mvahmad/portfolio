@@ -1,8 +1,4 @@
-export const metadata = {
-  title: 'Ahmad Movahedi Resume',
-  description: 'Read my Resume.',
-}
-
+// blog/app/components/resume.tsx
 export default function Resume({id}: {id: string}) {
   return (
    <section id={id} className="py-12">
