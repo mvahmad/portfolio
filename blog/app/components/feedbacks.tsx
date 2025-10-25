@@ -79,7 +79,7 @@ export default function Feedbacks({
 
   return (
     <section id={id} className="relative w-full py-12">
-      <h1 className="font-semibold  text-sky-600 text-2xl mb-8 tracking-tighter">Feedbacks</h1>
+      <h1 className="text-xl font-bold text-sky-600 mb-6">Feedbacks</h1>
       <div className={`relative mx-auto ${maxWidthClass} px-4 md:px-8`}>
 
         <div className="relative">

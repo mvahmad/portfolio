@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import { useEffect, useState } from "react";
 const navItems = {
-  "#skils": { name: "skils" },
+  "#about": { name: "about" },
   "#resume": { name: "resume" },
   "#projects": { name: "projects" },
   "#feedbacks":{name:"feedbacks"}
@@ -36,7 +36,7 @@ export function Navbar() {
     <header className="sticky top-0 z-40 bg-white/60 backdrop-blur-md border-b border-slate-100">
       <div className="lg:sticky lg:top-20">
         <nav
-         className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between"
+         className="max-w-6xl mx-auto px-6 py-4 flex sm:flex-row flex-col items-center sm:justify-between justify-center"
           id="nav"
         >
           <Link href={"/"}  className="text-2xl font-extrabold text-sky-600">Ahmad Movahedi</Link>
