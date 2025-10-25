@@ -1,9 +1,6 @@
 "use client"
 import { motion } from "framer-motion"
-export const metadata = {
-  title: 'Ahmad Movahedi Projects',
-  description: 'Read my Projects List.',
-}
+// 
 
 const projects = [
   {
