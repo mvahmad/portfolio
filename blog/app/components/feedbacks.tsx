@@ -57,18 +57,18 @@ export default function Feedbacks({
     autoplayDelay > 0 ? [autoplay.current] : []
   );
 
-  const [selected, setSelected] = useState(0);
-  useEffect(() => {
-    if (!emblaApi) return;
-    const onSelect = () => setSelected(emblaApi.selectedScrollSnap());
-    emblaApi.on("select", onSelect);
-    emblaApi.on("reInit", onSelect);
-    onSelect();
-    return () => {
-      emblaApi.off("select", onSelect);
-      emblaApi.off("reInit", onSelect);
-    };
-  }, [emblaApi]);
+  // const [selected, setSelected] = useState(0);
+  // useEffect(() => {
+  //   if (!emblaApi) return;
+  //   const onSelect = () => setSelected(emblaApi.selectedScrollSnap());
+  //   emblaApi.on("select", onSelect);
+  //   emblaApi.on("reInit", onSelect);
+  //   onSelect();
+  //   return () => {
+  //     emblaApi.off("select", onSelect);
+  //     emblaApi.off("reInit", onSelect);
+  //   };
+  // }, [emblaApi]);
 
   const fmt = (d: string | Date) =>
     new Date(d).toLocaleDateString("en-IR" ,{
