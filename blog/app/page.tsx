@@ -1,3 +1,4 @@
+"use client";
 import About from "./components/about";
 import Feedbacks from "./components/feedbacks";
 import Projects from "./components/projects";
