@@ -104,16 +104,16 @@ export default function Feedbacks({
           <div className="overflow-hidden pt-9 pb-2" ref={emblaRef}>
             {/* Track */}
             <div className="flex -ml-4">
-              {items.map((r, i) => {
-                const active = i === selected; // center-active
+              {items.map((r) => {
+                // 
                 return (
                   <div
-                    key={ids[i]}
+                    key={r.id}
                     className="pl-4 flex-[0_0_95%] sm:flex-[0_0_70%] md:flex-[0_0_50%] lg:flex-[0_0_33.333%]"
                   >
                     <div
-                      className={`relative w-full h-[14rem] md:h-[16rem] rounded-3xl border border-blue-100 bg-white p-5 pt-12 shadow-sm shadow-blue-100/60 transition-all duration-500 ${active ? "scale-105 z-10" : "scale-90 opacity-70"
-                        }`}
+                      className={`relative w-full h-[14rem] md:h-[16rem] rounded-3xl border 
+                        border-blue-100 bg-white p-5 pt-12 shadow-sm shadow-blue-100/60 transition-all duration-500 `}
                     >
                       {/* avatar on top edge, centered */}
                       {/* <div className="absolute -top-8 left-1/2 -translate-x-1/2">
@@ -145,10 +145,7 @@ export default function Feedbacks({
                         {r.text}
                       </blockquote>
 
-                      {/* active indicator */}
-                      {active && (
-                        <div className="mx-auto mt-3 h-1.5 w-12 rounded bg-blue-600" />
-                      )}
+                     
                     </div>
                   </div>
                 );
