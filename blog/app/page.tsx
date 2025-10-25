@@ -1,22 +1,5 @@
-"use client";
-import About from "./components/about";
-import Feedbacks from "./components/feedbacks";
-import Footer from "./components/footer";
-import { Navbar } from "./components/nav";
-import Projects from "./components/projects";
-import Resume from "./components/resume";
+import PageClient from "./components/pageClient";
 
 export default function Page() {
-  return (
-    <>
-    <Navbar />
-    <main className="max-w-6xl mx-auto px-6 py-5">
-      <About id={"about"} />
-      <Projects id={"projects"} />
-      <Feedbacks  id={"feedbacks"} />
-      <Resume id={"resume"} />
-    </main>
-    <Footer/>
-    </>
-  )
+  return <PageClient />;
 }

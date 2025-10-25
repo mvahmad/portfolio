@@ -10,7 +10,7 @@ const navItems = {
   feedbacks: { name: "feedbacks" },
 };
 
-export function Navbar() {
+export  function Navbar() {
   const [activeSection, setActiveSection] = useState("about");
 
   useEffect(() => {
