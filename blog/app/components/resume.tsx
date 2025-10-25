@@ -4,7 +4,7 @@ export default function Resume({id}: {id: string}) {
   return (
    <section id={id} className="py-12">
           <h2 className="text-xl font-bold text-sky-600 mb-6">My Resume</h2>
-
+          
           <div className="flex flex-col sm:flex-row items-start gap-6">
             <div className="rounded-2xl border border-slate-100 p-6 shadow-sm bg-white max-w-xl">
               <h3 className="font-semibold">Connect</h3>

@@ -12,7 +12,7 @@ export default function About({ id }: { id: string }) {
         transition={{ duration: 0.5 }}
         className="lg:col-span-2 px-4 sm:px-6"
         >
-        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-sky-600 mb-4">About</h2>
+        <h2 className="text-xl font-bold text-sky-600 mb-4">About</h2>
 
         <p className="text-sm sm:text-base md:text-lg text-slate-700 leading-relaxed">
           I’m Ahmad Movahedi, a web developer with over 2 years of experience in online brand promotion and digital presence optimization. My background in branding gives me a strong understanding of how design, strategy, and technology work together to create meaningful user experiences. I specialize in building modern, responsive, and high-performance web applications using HTML, CSS, JavaScript, and Next.js.

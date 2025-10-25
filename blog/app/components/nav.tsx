@@ -2,10 +2,10 @@
 import Link from 'next/link'
 import { useEffect, useState } from "react";
 const navItems = {
-  "#about": { name: "about" },
-  "#resume": { name: "resume" },
-  "#projects": { name: "projects" },
-  "#feedbacks":{name:"feedbacks"}
+  "about": { name: "about" },
+  "resume": { name: "resume" },
+  "projects": { name: "projects" },
+  "feedbacks":{name:"feedbacks"}
 };
 
 export function Navbar() {
@@ -45,7 +45,7 @@ export function Navbar() {
               return (
                 <Link
                   key={path}
-                  href={path}
+                   href={`#${path}`}
                    className={`hover:text-sky-600 ${activeSection === path ? "text-sky-600 font-semibold" : ""}`}
                 >
                   {name}
