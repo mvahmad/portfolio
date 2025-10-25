@@ -33,20 +33,20 @@ export function Navbar() {
 
 
   return (
-    <aside className="-ml-[8px] mb-16 tracking-tight">
+    <header className="sticky top-0 z-40 bg-white/60 backdrop-blur-md border-b border-slate-100">
       <div className="lg:sticky lg:top-20">
         <nav
-          className="flex scroll-smooth sm:justify-between justify-center items-center sm:flex-row flex-col  relative px-0 pb-0 fade md:overflow-auto scroll-pr-6 md:relative"
+         className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between"
           id="nav"
         >
-          <Link href={"/"} className='text-3xl text-sky-600 font-bold'>Ahmad Movahedi</Link>
-          <div className="flex flex-row space-x-0 sm:pr-10 pr-0">
+          <Link href={"/"}  className="text-2xl font-extrabold text-sky-600">Ahmad Movahedi</Link>
+          <div className="flex flex-row md:flex items-center gap-6 text-sm text-slate-600">
             {Object.entries(navItems).map(([path, { name }]) => {
               return (
                 <Link
                   key={path}
                   href={path}
-                  className={`transition-all ${activeSection == path ? "font-bold text-blue-600" : ""} text-sky-400 hover:text-sky-700 flex align-middle relative py-1 px-2 m-1`}
+                   className={`hover:text-sky-600 ${activeSection === path ? "text-sky-600 font-semibold" : ""}`}
                 >
                   {name}
                 </Link>
@@ -55,6 +55,7 @@ export function Navbar() {
           </div>
         </nav>
       </div>
-    </aside>
+      </header>
+
   )
 }
