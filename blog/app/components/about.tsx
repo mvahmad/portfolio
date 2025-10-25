@@ -1,7 +1,7 @@
 export default function About({id}: {id: string}) {
   return (
       <section id={id}>
-      <h1 className="mb-8 text-2xl text-[#003049] font-semibold tracking-tighter">
+      <h1 className="mb-8 text-2xl text-sky-600 font-semibold tracking-tighter">
        About
       </h1>
       <p className="mb-4 text-[#003049]">

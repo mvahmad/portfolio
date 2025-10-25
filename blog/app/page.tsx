@@ -8,7 +8,7 @@ export default function Page() {
     <>
       <About id={"about"} />
       <Projects id={"projects"} />
-      <Feedbacks id={"feedbacks"} />
+      <Feedbacks  id={"feedbacks"} />
       <Resume id={"resume"} />
     </>
   )
