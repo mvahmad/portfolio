@@ -33,6 +33,11 @@ html {
   min-width: 360px;
 }
 
+/* globals.css */
+html {
+  scroll-behavior: smooth;
+}
+
 .prose .anchor {
   @apply absolute invisible no-underline;
 
