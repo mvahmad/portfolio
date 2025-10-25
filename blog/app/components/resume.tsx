@@ -1,3 +1,4 @@
+"use client"
 // blog/app/components/resume.tsx
 export default function Resume({id}: {id: string}) {
   return (
