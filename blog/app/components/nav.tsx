@@ -5,9 +5,10 @@ import { useEffect, useState } from "react";
 
 const navItems = {
   about: { name: "about" },
-  resume: { name: "resume" },
+  // 
   projects: { name: "projects" },
   feedbacks: { name: "feedbacks" },
+  resume: { name: "resume" },
 };
 
 export  function Navbar() {
