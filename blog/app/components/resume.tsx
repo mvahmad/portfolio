@@ -35,19 +35,7 @@ export default function Resume({id}: {id: string}) {
               </p>
 
               <div className="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-3">
-                {/* <div className="w-full bg-gray-200 rounded-full  dark:bg-gray-700">
-                 <div className="bg-blue-400  px-2 py-1 text-white text-semibold  rounded-full" style={{"width": "45%"}} >Next.js</div>
-                </div>
-                <div className="w-full bg-gray-200 rounded-full  dark:bg-gray-700">
-                 <div className="bg-blue-400  px-2 py-1 text-white text-semibold  rounded-full" style={{"width": "70%"}} >React</div>
-                </div>
-                <div className="w-full bg-gray-200 rounded-full  dark:bg-gray-700">
-                 <div className="bg-blue-400  px-2 py-1 text-white text-semibold  rounded-full" style={{"width": "70%"}} >Tailwind</div>
-                </div>
-                 <div className="w-full bg-gray-200 rounded-full  dark:bg-gray-700">
-                  <div className="bg-blue-400  px-2 py-1 text-white text-semibold  rounded-full" style={{"width": "90%"}} >Java Script</div>
-                </div>
-                 */}
+                {/*  */}
                  {skils.map((item,index)=>{
                   return(
                      <div key={index} className="w-full bg-gray-200 rounded-full h-[2rem] dark:bg-gray-700">
@@ -59,8 +47,7 @@ export default function Resume({id}: {id: string}) {
                  })
 
                  }
-
-
+                
               </div>
             </div>
           </div>
