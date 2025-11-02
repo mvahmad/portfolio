@@ -1,6 +1,6 @@
 import "./global.css";
 import type { Metadata } from "next";
-
+import { Providers } from "./providers";
 export const metadata: Metadata = {
   title: "Ahmad Movahedi | Frontend Developer",
   description:
@@ -9,9 +9,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className="bg-white text-slate-900 antialiased">
-        {children}
+    <html lang="en" suppressHydrationWarning>
+      <body className="text-slate-900">
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

@@ -9,8 +9,8 @@ const Navbar = dynamic(() => import("../components/nav").then(mod => mod.Navbar)
 export default function PageClient() {
   return (
     <>
-        <Navbar />
-            <main className="max-w-6xl mx-auto px-6 py-5">
+       <Navbar />
+            <main className="max-w-6xl mx-auto px-6 py-5 dark text-foreground bg-background">
             <About id={"about"} />
             <Projects id={"projects"} />
             <Feedbacks  id={"feedbacks"} />

@@ -1,5 +1,8 @@
-@import 'tailwindcss';
-
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Global Styles */
 ::selection {
   background-color: #47a3f3;
   color: #fefefe;

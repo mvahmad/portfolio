@@ -3,8 +3,9 @@
 import useEmblaCarousel from "embla-carousel-react";
 import { EmblaOptionsType } from "embla-carousel";
 import Autoplay from "embla-carousel-autoplay";
-import { useMemo, useRef } from "react";
-
+import { useMemo, useRef , useState,useEffect } from "react";
+import { useTheme } from 'next-themes';
+import clsx from 'clsx';
 export type Review = {
   id: string | number;
   author: string;
@@ -35,6 +36,16 @@ export default function Feedbacks({
   items = demo,
   id
 }: Props){
+    const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  // Prevent hydration mismatch
+  useEffect(() => setMounted(true), []);
+
+  
+
+
+
        const ids = useMemo(() => items.map((s) => String(s.id)), [items]);
 
   // Embla options (RTL aware, center-active, infinite loop)
@@ -57,19 +68,7 @@ export default function Feedbacks({
     autoplayDelay > 0 ? [autoplay.current] : []
   );
 
-  // const [selected, setSelected] = useState(0);
-  // useEffect(() => {
-  //   if (!emblaApi) return;
-  //   const onSelect = () => setSelected(emblaApi.selectedScrollSnap());
-  //   emblaApi.on("select", onSelect);
-  //   emblaApi.on("reInit", onSelect);
-  //   onSelect();
-  //   return () => {
-  //     emblaApi.off("select", onSelect);
-  //     emblaApi.off("reInit", onSelect);
-  //   };
-  // }, [emblaApi]);
-
+ 
   const fmt = (d: string | Date) =>
     new Date(d).toLocaleDateString("en-IR" ,{
       year: "numeric",
@@ -77,9 +76,16 @@ export default function Feedbacks({
       day: "numeric",
     });
 
+    if (!mounted) {
+    // Render a non-themed placeholder on server render
+    return (
+      <section id={id} className="relative w-full py-12" />
+    );
+  }
+
   return (
     <section id={id} className="relative w-full py-12">
-      <h1 className="text-xl font-bold text-sky-600 mb-6">Feedbacks</h1>
+      <h1 className={clsx("text-xl font-bold  mb-6",theme === "dark" ? "text-sky-300" : "text-sky-600")}>Feedbacks</h1>
       <div className={`relative mx-auto ${maxWidthClass} px-4 md:px-8`}>
 
         <div className="relative">

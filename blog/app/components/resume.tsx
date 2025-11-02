@@ -1,3 +1,7 @@
+"use client";
+import {useState,useEffect } from "react";
+import { useTheme } from 'next-themes';
+import clsx from 'clsx';
 const skils  = [
   {"title":"Next.js","style" :{"width": "45%"}},
   {"title":"React.js","style" :{"width": "65%"}},
@@ -6,18 +10,33 @@ const skils  = [
   {"title":"Node.js","style" :{"width": "20%"}},
   {"title":"Nest.js","style" :{"width": "20%"}},
 ]
-// blog/app/components/resume.tsx
+// Resume component
 export default function Resume({id}: {id: string}) {
+  const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  // Prevent hydration mismatch
+  useEffect(() => setMounted(true), []);
+  if (!mounted) {
+     return (
+      <section id={id} className="py-12" />
+    );
+  }
+
   return (
    <section id={id} className="py-12">
-          <h2 className="text-xl font-bold text-sky-600 mb-6">My Resume</h2>
+          <h2 className={clsx("text-xl font-bold  mb-6",theme === "dark" ? "text-sky-300":"text-sky-600")}>My Resume</h2>
           
           <div className="flex flex-col sm:flex-row items-start gap-6">
-            <div className="rounded-2xl border border-slate-100 p-6 shadow-sm bg-white max-w-xl">
+            <div className={clsx("rounded-2xl border p-6 shadow-sm max-w-xl",
+              theme === "dark" ? "bg-slate-800 border-slate-700 text-slate-200" : "bg-white border-slate-200 text-slate-700"
+            )}>
               <h3 className="font-semibold">Connect</h3>
-              <ul className="mt-4 space-y-3 text-slate-700">
+              <ul className={clsx("mt-4 space-y-3",
+                theme === "dark" ? "text-slate-300" : "text-slate-700"
+              )}>
                 <li>
-                  <a  target="_blank"  href="https://github.com/mvahmad" className="inline-flex items-center gap-2 underline">GitHub</a>
+                  <a  target="_blank" href="https://github.com/mvahmad" className="inline-flex items-center gap-2 underline">GitHub</a>
                 </li>
                 <li>
                   <a 
@@ -29,7 +48,7 @@ export default function Resume({id}: {id: string}) {
               </ul>
             </div>
 
-            <div className="flex-1 text-slate-600">
+            <div className={clsx("flex-1",theme==="dark"?"text-slate-300": "text-slate-600")}>
               <h4 className="font-medium">Summary</h4>
               <p className="mt-2">Frontend developer focused on building accessible, high-performance web apps. Skilled in React, Next.js, and modern CSS.
               </p>
