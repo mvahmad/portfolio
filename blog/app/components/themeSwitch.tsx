@@ -18,7 +18,7 @@ export function ThemeSwitch() {
     <label
       className={`
         relative flex items-center justify-center cursor-pointer
-        w-[2.5rem] h-[2.5rem] rounded-md shadow-md
+        w-[2rem] h-[2rem] rounded-md shadow-md
         bg-slate-200 dark:bg-slate-800
         transition-all duration-500
         hover:scale-110 hover:shadow-lg
@@ -30,7 +30,7 @@ export function ThemeSwitch() {
         onChange={(e) => setTheme(e.target.checked ? 'dark' : 'light')}
         className="hidden peer"
       />
-      
+
       <span
       >
         {isDark ? (
