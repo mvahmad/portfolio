@@ -17,7 +17,7 @@ export type Review = {
 
 const demo: Review[] = [
     { id: 1, author: "Mohammad Sami Askari", date: "2025-08-01", text: "“The site feels modern and well-optimized.”" },
-    { id: 2, author: "bil gits", date: "2025-07-21", text: "“Some buttons don’t have hover effects, which could make interactions clearer.”" },
+    { id: 2, author: "Ali raiesi", date: "2025-07-21", text: "“Some buttons don’t have hover effects, which could make interactions clearer.”" },
     { id: 3, author: "Amir Hossein Masihi",  date: "2025-07-10", text: "“The mobile responsiveness works well — nice use of CSS modules/Tailwind.”" },
     { id: 4, author: "Omid Shanbepour", date: "2025-07-10", text: "“Consider setting up proper caching and incremental static regeneration for scalability.”" },
 ];

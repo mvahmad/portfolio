@@ -9,18 +9,20 @@ const projects = [
     title: "Project One",
     tags: ["Next.js", "Tailwind"],
     desc: "A fast, accessible marketing site with focus on performance.",
+    liveLink:"https://elite-sport-beta.vercel.app",
+    sourceLink:"https://github.com/mvahmad/shopping-cart",
+    imgSrc:"/elite-sport.png",
+    imgAlt:"elite-sport"
   },
   {
     id: 2,
     title: "Project Two",
     tags: ["React", "API"],
-    desc: "Interactive dashboard with charts and custom components.",
-  },
-  {
-    id: 3,
-    title: "Project Three",
-    tags: ["UI/UX", "Design"],
-    desc: "Design system and component library for internal tooling.",
+    desc: "Interactive dashboard with charts and custom components for elite-sport back-end.",
+    liveLink:"https://elite-sport-beta.vercel.app/admin",
+    sourceLink:"https://github.com/mvahmad/shopping-cart",
+    imgSrc:"/dashboard.png",
+    imgAlt:"elite-sport-dashboard"
   },
 ];
 
@@ -54,7 +56,12 @@ export default function Projects({id}: {id: string}) {
                 " bg-white border-slate-200 hover:border-slate-300 ")}
               >
                 <div className="h-40 rounded-md bg-slate-50 flex items-center justify-center text-slate-400 mb-4">
-                  <span className="text-sm">Project screenshot</span>
+                  {/* <span className="text-sm">Project screenshot</span> */}
+                  <img
+                  src={p.imgSrc}
+                  alt={p.imgAlt}
+                  className="h-40 bg-sky-600 object-cover"
+                    />
                 </div>
                 <h3 className={clsx("font-semibold text-lg" , theme === "dark" ? "text-slate-300" :"text-slate-700")}>{p.title}</h3>
                 <p className={clsx("text-sm mt-2",theme === "dark" ? "text-slate-300" :"text-slate-600")}>{p.desc}</p>
@@ -68,8 +75,8 @@ export default function Projects({id}: {id: string}) {
                   ))}
                 </div>
                 <div className="mt-6 flex items-center gap-3">
-                  <a className={clsx("text-sm underline",theme === "dark" ? "text-slate-300" :"text-slate-700")} href="#">Live</a>
-                  <a  className={clsx("text-sm underline",theme === "dark" ? "text-slate-300" :"text-slate-700")} href="#">Source</a>
+                  <a className={clsx("text-sm underline",theme === "dark" ? "text-slate-300" :"text-slate-700")} target="_blank" href={p.liveLink}>Live</a>
+                  <a  className={clsx("text-sm underline",theme === "dark" ? "text-slate-300" :"text-slate-700")} target="_blank" href={p.sourceLink}>Source</a>
                 </div>
               </motion.article>
             ))}
