@@ -14,12 +14,12 @@ export default function About({ id }: { id: string }) {
   if (!mounted) {
     // Render a non-themed placeholder on server render
     return (
-      <section id={id} className="px-4 py-10 sm:px-6 lg:px-8 opacity-0" />
+      <section id={id} className="opacity-0" />
     );
   }
 
   return (
-    <section id={id} className="px-4 py-10 sm:px-6 lg:px-8">
+    <section id={id} className="">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
        <motion.div
         initial={{ opacity: 0, x: -20 }}
