@@ -48,7 +48,7 @@ export function Header() {
   return (
     <header className="sticky top-2 z-40 mx-auto w-full ">
       <nav className="relative flex items-center justify-between rounded-2xl
-        border border-black/10 bg-white/80 backdrop-blur-md px-4 sm:px-6 lg:px-10 py-4">
+        border border-black/10 bg-white/80 backdrop-blur-md text-black px-4 sm:px-6 lg:px-10 py-4">
 
         {/* Brand */}
         <div className="flex items-center gap-2 font-semibold">
@@ -91,7 +91,7 @@ export function Header() {
           <div  className="absolute left-0 top-full mt-4 w-full
               rounded-2xl border border-black/10
               bg-white/95 p-6 shadow-xl backdrop-blur-md
-              dark:bg-black/90 dark:border-white/10
+              
               md:hidden">
             <ul className="flex flex-col gap-4">
               {navItems.map((item) => (
