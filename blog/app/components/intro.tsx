@@ -2,10 +2,12 @@
 
 import { motion } from "framer-motion";
 import { Code } from "lucide-react";
+import FeaturesSection from "./featuresSection";
 
 export default function IntroSection() {
   return (
-    <section className="relative z-10 flex flex-col items-center justify-center p-6 sm:p-8 text-center">
+    <>
+     <section className="relative z-10 flex flex-col items-center justify-center p-6 sm:p-8 text-center">
       <motion.div
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
@@ -58,5 +60,8 @@ export default function IntroSection() {
         </motion.p>
       </motion.div>
     </section>
+      <FeaturesSection />
+    </>
+   
   );
 }
