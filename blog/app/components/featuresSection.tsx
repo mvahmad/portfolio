@@ -16,8 +16,8 @@ export default function FeaturesSection (){
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}>
-            <section className="rounded-2xl border border-black/10 bg-white/80 backdrop-blur-md px-4 sm:px-6 lg:px-10 py-4
-        dark:bg-black/50 dark:border-white/10 my-3 shadow-md">
+            <section className="rounded-2xl border border-black/10 bg-white/80 backdrop-blur-md 
+            px-4 sm:px-6 lg:px-10 py-4my-3 shadow-md">
         <div className="px-3 py-6">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 max-w-5xl mx-auto">
             {featuresItem.map((i,index)=>{

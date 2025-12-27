@@ -48,9 +48,7 @@ export function Header() {
   return (
     <header className="sticky top-2 z-40 mx-auto w-full ">
       <nav className="relative flex items-center justify-between rounded-2xl
-        border border-black/10 bg-white/80 backdrop-blur-md
-        px-4 sm:px-6 lg:px-10 py-4
-        dark:bg-black/50 dark:border-white/10">
+        border border-black/10 bg-white/80 backdrop-blur-md px-4 sm:px-6 lg:px-10 py-4">
 
         {/* Brand */}
         <div className="flex items-center gap-2 font-semibold">
