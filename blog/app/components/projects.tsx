@@ -6,7 +6,7 @@ import { useTheme } from 'next-themes';
 const projects = [
   {
     id: 1,
-    title: "Project One",
+    title: "Elite Sport",
     tags: ["Next.js", "Tailwind"],
     desc: "A fast, accessible marketing site with focus on performance.",
     liveLink:"https://elite-sport-beta.vercel.app",
@@ -16,7 +16,7 @@ const projects = [
   },
   {
     id: 2,
-    title: "Project Two",
+    title: "Elite Sport Admin",
     tags: ["React", "API"],
     desc: "Interactive dashboard with charts and custom components for elite-sport back-end.",
     liveLink:"https://elite-sport-beta.vercel.app/admin",
