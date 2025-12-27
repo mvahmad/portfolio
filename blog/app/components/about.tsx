@@ -14,18 +14,18 @@ export default function About({ id }: { id: string }) {
   if (!mounted) {
     // Render a non-themed placeholder on server render
     return (
-      <section id={id} className="px-4 py-10 sm:px-6 lg:px-8 opacity-0" />
+      <section id={id} className="opacity-0" />
     );
   }
 
   return (
-    <section id={id} className="px-4 py-10 sm:px-6 lg:px-8">
+    <section id={id} className="py-12">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
        <motion.div
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5 }}
-        className="lg:col-span-2 px-4 sm:px-6"
+        className="lg:col-span-2"
         >
         <h2 className={clsx("text-xl font-bold  mb-4",
           theme === 'dark'?  " text-sky-300 " : " text-sky-600 "
